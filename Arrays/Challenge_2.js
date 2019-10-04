@@ -22,33 +22,33 @@ function mergeArrays(arr1 = [], arr2 = []) {
     if(arr2.length == 0)
         return arr1;
 
-    let i = 0, j = 0, k = 0, res = [];
+    let i = 0, j = 0, res = [];
     while(i < arr1.length && j < arr2.length) {
         if(arr1[i] <= arr2[j]) {
-            res[k] = arr1[i];
-            k++;
+            res.push(arr1[i]);
             i++;
         }
         else {
-            res[k] = arr2[j];
-            k++;
+            res.push(arr2[j]);
             j++;
         }
     }
 
     while(i < arr1.length) {
-        res[k] = arr1[i];
-        k++;
+        res.push(arr1[i]);
         i++
     }
 
     while(j < arr2.length) {
-        res[k] = arr2[j];
-        k++;
+        res.push(arr2[j]);
         j++
     }
 
     return res;
 }
 
+function mergeArraysUsginApi(arr1 = [], arr2 = []) {
+    return ([...arr1, ...arr2]).sort((a, b) => a - b)
+}
 exports.mergeArrays = mergeArrays;
+exports.mergeArraysUsginApi = mergeArraysUsginApi;
