@@ -37,5 +37,24 @@ function findMinimumUsingApi(arr = []) {
     arr.sort((a, b) => a - b);
     return arr[0];
 }
+
+function findMinimumIerateMethod(arr = []) {
+    if(arr.length < 1)
+        return undefined;
+    
+    if(arr.length == 1)
+        return arr[0];
+
+    let currentMin = arr[0];
+    
+    for(let val of arr) {
+        if(val < currentMin)
+            currentMin = val;
+    }
+
+    return currentMin;
+}
+
 exports.findMinimumUsingApi = findMinimumUsingApi;
 exports.findMinimum = findMinimum;
+exports.findMinimumIerateMethod = findMinimumIerateMethod;
