@@ -2,7 +2,6 @@
     Function that will take array of unsorted elements and 
     return sorted elements.
 */
-quickSort([3, 4, -1, 0, 2], 0, 2);
 function quickSort(arr = [], start = 0, end = 0) {
     
     if(start < end) {
