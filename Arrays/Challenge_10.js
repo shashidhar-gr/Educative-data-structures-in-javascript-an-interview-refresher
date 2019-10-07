@@ -14,6 +14,7 @@
     Sample Output
     arr = [5,1,4,2,3]
 */
+maxMin([1,2,3,4,5,6])
 function maxMin(arr = []) {
     if(arr.length < 1)
         return undefined;
@@ -21,7 +22,17 @@ function maxMin(arr = []) {
     if(arr.length == 1)
         return arr;
 
-    
+    let res = [], tem = 0, i = 0, j = 0;
+
+    for(i = 0, j = arr.length-1; i < j; i++, j--) {
+        res.push(arr[j]);
+        res.push(arr[i]);
+    }
+
+    if(arr.length % 2 !== 0)
+        res.push(arr[i])
+
+    return res;
 }   
 
 exports.maxMin = maxMin;
