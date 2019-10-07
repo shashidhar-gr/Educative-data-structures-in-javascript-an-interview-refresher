@@ -28,7 +28,14 @@ function findMinimum(arr = []) {
 }
 
 function findMinimumUsingApi(arr = []) {
-
+    if(arr.length < 1)
+        return undefined;
+    
+    if(arr.length == 1)
+        return arr[0];
+    
+    arr.sort((a, b) => a - b);
+    return arr[0];
 }
 exports.findMinimumUsingApi = findMinimumUsingApi;
 exports.findMinimum = findMinimum;
