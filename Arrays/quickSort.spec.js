@@ -30,4 +30,10 @@ describe('partition', function() {
     it('should return [-1, 0, 2, 3, 4] since array contains.', function() {
         assert.deepEqual(quickSort([3, 4, -1, 0, 2], 0, 4), [-1, 0, 2, 3, 4])
     })
+    it('should return [-1, -1, -1, -1, -1] since array contains.', function() {
+        assert.deepEqual(quickSort([-1, -1, -1, -1, -1], 0, 4), [-1, -1, -1, -1, -1])
+    })
+    it('should return [-1, -1, -1, 0, 0] since array contains.', function() {
+        assert.deepEqual(quickSort([0, -1, -1, -1, 0], 0, 4), [-1, -1, -1, 0, 0])
+    })
 })
