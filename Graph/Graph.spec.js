@@ -12,4 +12,10 @@ describe('Graph', function() {
         assert.equal(graph.vertices, 2);
         assert.equal(graph.list.length, 2);
     })
+    it('should add edge to graph', function() {
+        let graph = new Graph(2);
+        assert.equal(graph.vertices, 2);
+        assert.equal(graph.list.length, 2);
+        assert.equal(graph.addEdge(0, 1))
+    })
 })
